@@ -1,0 +1,54 @@
+body {
+  background: -webkit-linear-gradient(#3d4869,#263048) fixed; /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(#3d4869,#263048) fixed; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background-repeat: no-repeat;
+
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  text-shadow: 0px 0px 2px #000000;
+  color: #ffffff;
+}
+
+#app {
+  background: url(images/bg.jpg) no-repeat;
+
+  width:    750px;
+  height:   500px;
+
+  position: absolute;
+  top:      15%;
+  left:     15%;
+}
+
+#weather {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.temperature {
+
+  font-size: 80px;
+  vertical-align: top;
+  position: absolute;
+  left: 80px;
+}
+
+#temp-values {
+  text-align: right;
+  text-justify: distribute;
+  display: block;
+  position: relative;
+  top: -60px;
+}
+
+#info {
+  padding-left: 20px;
+  position: relative;
+  top: -20px;
+}
+
+.icon {
+  position: inherit;
+  top: 2px;
+  padding-left: 8px;
+}
