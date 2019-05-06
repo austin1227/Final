@@ -56,10 +56,9 @@ let weatherApp = new Vue({
   },
   beforeMount() {
     this.getWeather();
-  },
-  beforeMount() {
     this.getNews();
   },
+
 
 
   });
