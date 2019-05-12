@@ -1,54 +1,72 @@
 body {
-  background: -webkit-linear-gradient(#3d4869,#263048) fixed; /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(#3d4869,#263048) fixed; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  background-repeat: no-repeat;
 
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
-  text-shadow: 0px 0px 2px #000000;
+  text-shadow: 0px 0px 2px #000;
   color: #ffffff;
+  margin: 0px;
 }
 
 #app {
   background: url(images/bg.jpg) no-repeat;
-
-  width:    750px;
-  height:   500px;
-
-  position: absolute;
-  top:      15%;
-  left:     15%;
+  background-size: cover;
+  position: relative;
+  margin: 0px;
+  height: 400px;
+  text-align: center;
 }
 
 #weather {
   padding: 15px;
   vertical-align: middle;
+
 }
 
 .temperature {
 
   font-size: 80px;
-  vertical-align: top;
-  position: absolute;
-  left: 80px;
+  position: relative;
+
 }
 
 #temp-values {
-  text-align: right;
-  text-justify: distribute;
-  display: block;
-  position: relative;
-  top: -60px;
+  text-align: center;
+
 }
 
 #info {
+  position: relative;
+  bottom: 20px;
+
+}
+
+#news {
   padding-left: 20px;
   position: relative;
-  top: -20px;
+  overflow: auto;
+  
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1.4;
+  background-color: grey;
+  text-shadow: 0;
+  margin: 0px;
+  text-align: left;
+
 }
 
 .icon {
-  position: inherit;
+  position: relative;
   top: 2px;
   padding-left: 8px;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #000;
+   color: white;
+   text-align: center;
 }

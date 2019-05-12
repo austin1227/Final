@@ -11,12 +11,12 @@
 
   <body>
     <div id="app">
-          <h1>{{name}}</h1>
-          <div id="weather">
 
-            <img src="images/sunny.svg"> {{overcast}}
+          <div id="weather">
+            <h1>{{name}}</h1>
+            <h3>{{overcast}}</h3>
             <span class="temperature">{{currentTemp}}°</span><br>
-            <span id="temp-values">Min {{minTemp}}° <br> Max {{maxTemp}}°</span>
+            <span id="temp-values">  High {{maxTemp}}°  Low {{minTemp}}°</span>
           </div>
 
           <div id="info">
@@ -28,17 +28,27 @@
           </div>
 
 
+          <div id="news">
 
-            <p> Top News:  {{news}} </p>
+            <div v-for="article in articles" :key="article.title">
+                <p>{{article.title}} </p>
+                <a v-bind:href="''"> {{ article.url }} </a>
 
+            </div>
+          </div>
 
 
     </div>
+
+          <div class="footer">
+            <p>API Sources</p>
+          </div>
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="script.js"></script>
   </body>
+
 
 </html>

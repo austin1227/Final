@@ -13,7 +13,9 @@ let weatherApp = new Vue({
     overcast: '',
     icon: '',
     name: '',
-    news: ''
+    articles: '',
+    title: '',
+    url: '',
 
 
   },
@@ -31,10 +33,10 @@ let weatherApp = new Vue({
           this.pressure = response.data.main.pressure;
           this.humidity = response.data.main.humidity + '%';
           this.wind = response.data.wind.speed + 'm/s';
-          this.overcast = response.data.weather[0].description;
+          this.overcast = response.data.weather[0].main;
           this.icon = "images/" + response.data.weather[0].icon.slice(0, 2) + ".svg";
-          this.sunrise = new Date(response.data.sys.sunrise*1000).toLocaleTimeString("en-GB").slice(0,4);
-          this.sunset = new Date(response.data.sys.sunset*1000).toLocaleTimeString("en-GB").slice(0,4);
+          this.sunrise = new Date(response.data.sys.sunrise*1000).toLocaleTimeString("en-US").slice(0,4);
+          this.sunset = new Date(response.data.sys.sunset*1000).toLocaleTimeString("en-US").slice(0,4);
       })
 
       .catch(error => {
@@ -47,7 +49,8 @@ let weatherApp = new Vue({
       axios
         .get(url)
         .then(response => {
-          this.news = response.data.articles;
+          this.articles = response.data.articles;
+          this.url = response.data.articles.url;
         })
 
     },
