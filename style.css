@@ -2,7 +2,6 @@ body {
 
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
-  text-shadow: 0px 0px 2px #000;
   color: #ffffff;
   margin: 0px;
 }
@@ -41,17 +40,18 @@ body {
 }
 
 #news {
-  padding-left: 20px;
+  padding: 20px;
   position: relative;
   overflow: auto;
-  
-  font-size: 20px;
-  font-weight: 200;
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+  font-weight: 300;
   line-height: 1.4;
-  background-color: grey;
-  text-shadow: 0;
+  height: 400px;
+  background-color: #96D5EB;
   margin: 0px;
   text-align: left;
+
 
 }
 
@@ -69,4 +69,24 @@ body {
    background-color: #000;
    color: white;
    text-align: center;
+   
+}
+/* unvisited link */
+a:link {
+  color: #57A3BD;
+}
+
+/* visited link */
+a:visited {
+  color: #4F7F8F;
+}
+
+/* mouse over link */
+a:hover {
+  color: #57A3BD;
+}
+
+/* selected link */
+a:active {
+  color: #57A3BD;
 }
