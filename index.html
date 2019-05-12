@@ -15,13 +15,14 @@
 
           <div id="weather">
             <h1>{{name}}</h1>
-            <h3>{{overcast}}</h3>
+            <h3><img class="icon" :src=icon> {{overcast}}</h3>
             <span class="temperature">{{currentTemp}}°</span><br>
             <span id="temp-values">  High {{maxTemp}}°  Low {{minTemp}}°</span>
           </div>
 
           <div id="info">
-            <img class="icon" :src=icon> {{sunrise}}
+            
+            <img class="icon" src="images/sunrise.svg">{{sunrise}}
             <img class="icon" src="images/sunset.svg"> {{sunset}}
             <img class="icon" src="images/humidity.svg"> {{humidity}}
             <img class="icon" src="images/pressure.svg"> {{pressure}}
